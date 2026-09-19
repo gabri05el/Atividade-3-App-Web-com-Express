@@ -99,7 +99,7 @@ body {
 .auth-form input {
     padding: 0.7rem 0.8rem;
     border-radius: 0.5rem;
-    border: 0.625rem solid #cbd5e1;
+    border: 0.25rem solid #cbd5e1;
     font: inherit;
 }
 
