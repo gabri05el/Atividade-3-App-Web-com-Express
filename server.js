@@ -1,16 +1,24 @@
-const express = require("express");
-//import express from "express";
-/*
+import express from "express";
+import path from "node:path";
+
 const app = express();
 const port = 3000;
-/*
-app.get("/", (req, res) => {
-  res.send("Hello World");
+
+const publicPath = path.join(import.meta.dirname, "public");
+const pages = path.join(publicPath, "pages");
+const assets = path.join(publicPath, "assets");
+
+// definir uma rota para a pasta assets
+app.use("/assets", express.static(assets));
+
+app.get("/", function(req, res){
+    res.sendFile(path.join(pages,"index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Rodando em http://localhost:${port}`);
+app.use(function(req,res){
+    res.sendFile(path.join(pages,"404.html"));
 });
-*/
 
-console.log("oie");
+app.listen(port, function () {
+    console.log(`Rodando em http://localhost:${port}`);
+});
