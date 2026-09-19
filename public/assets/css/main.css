@@ -11,7 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+
 }
 
 .card {
@@ -23,7 +24,6 @@ body {
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
-     
 }
 
 .title {
@@ -39,7 +39,8 @@ body {
 .logos {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
 }
 
 .logo-dsm {
